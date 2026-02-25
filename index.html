@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sana Ullah Clinic provides daily specialist checkups for families in Hafizabad.">
+  <title>Sana Ullah Clinic | Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="index">
+  <div class="page-transition" aria-hidden="true"></div>
+
+  <header class="navbar-wrap">
+    <nav class="navbar container" aria-label="Main Navigation">
+      <a href="index.html" class="logo">
+        <i class="fa-solid fa-staff-snake"></i>
+        <span data-clinic-name>Sana Ullah Clinic</span>
+      </a>
+
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <ul class="nav-links">
+        <li><a href="index.html" data-nav="index" data-i18n="navHome">Home</a></li>
+        <li><a href="about.html" data-nav="about" data-i18n="navAbout">About</a></li>
+        <li><a href="services.html" data-nav="services" data-i18n="navServices">Services</a></li>
+        <li><a href="gallery.html" data-nav="gallery" data-i18n="navGallery">Gallery</a></li>
+        <li><a href="contact.html" data-nav="contact" data-i18n="navContact">Contact</a></li>
+        <li>
+          <button class="lang-toggle" aria-label="Toggle language">اردو | EN</button>
+        </li>
+        <li>
+          <a class="btn-nav call-link" href="tel:+923237366386">
+            <i class="fa-solid fa-phone"></i>
+            <span data-i18n="navCall">Call Now</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <span class="badge" data-i18n="heroBadge">Gold Medalist General Physician</span>
+          <h1 data-i18n="heroTitle">Welcome to Sana Ullah Clinic</h1>
+          <p data-i18n="heroSubtitle">Compassionate care with modern diagnosis and trusted family treatment.</p>
+          <div class="hero-actions">
+            <a href="tel:+923237366386" class="btn btn-primary call-link" data-i18n="heroPrimaryCta">Call Clinic</a>
+            <a href="services.html" class="btn btn-outline" data-i18n="heroSecondaryCta">View Services</a>
+          </div>
+        </div>
+        <div class="hero-card reveal">
+          <img src="assets/asher.png" alt="Dr. Asher Malik" loading="lazy">
+          <h3 data-clinic-doctor>Dr. Asher Malik</h3>
+          <p>MBBS/MD, NLE, PMDC, RMP</p>
+          <p data-i18n="doctorBio">Dr. Asher Malik (MBBS/MD, NLE, PMDC, RMP) is a gold medalist physician known for practical diagnosis, patient education, and long-term family care.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="announcement">
+      <div class="container announcement-row">
+        <h2 data-i18n="announceTitle">Good News from Sana Ullah Clinic</h2>
+        <p data-i18n="announceText">Daily specialist checkup for men, women, and children is available.</p>
+      </div>
+    </section>
+
+    <section class="section container reveal">
+      <div class="section-head">
+        <span class="section-kicker" data-i18n="sectionAbout">About the Doctor</span>
+        <h2 data-clinic-doctor>Dr. Asher Malik</h2>
+      </div>
+
+      <div class="about-split">
+        <article class="panel">
+          <h3 data-i18n="experienceTitle">Professional Experience</h3>
+          <ul class="clean-list">
+            <li data-i18n="exp1">Ex. Medical Officer - Almeer Shirazi Hospital, Hafizabad</li>
+            <li data-i18n="exp2">Ex. Medical Officer - Noor Al Shifa Hospital, Lahore</li>
+            <li data-i18n="exp3">Ex. House Physician - Service Hospital, Lahore</li>
+            <li data-i18n="exp4">Ex. House Surgeon - Service Hospital, Lahore</li>
+          </ul>
+        </article>
+
+        <aside class="panel contact-mini">
+          <h3 data-i18n="sectionContact">Contact & Visit</h3>
+          <p><i class="fa-solid fa-phone"></i> <a class="call-link" href="tel:+923237366386" data-clinic-phone>0323-7366386</a></p>
+          <p><i class="fa-solid fa-location-dot"></i> <span data-clinic-address>Vanike Road, Opp. Akram Tractor Workshop, Hafizabad</span></p>
+          <p><i class="fa-solid fa-clock"></i> <span data-i18n="contactCardHoursValue">Daily Checkup Available</span></p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section section-alt reveal">
+      <div class="container">
+        <div class="section-head center">
+          <span class="section-kicker" data-i18n="sectionServices">Our Specialties</span>
+          <h2 data-i18n="sectionServices">Our Specialties</h2>
+        </div>
+        <div id="servicesGrid" class="card-grid stagger-parent"></div>
+      </div>
+    </section>
+
+    <section class="section stats reveal">
+      <div class="container stats-grid">
+        <div class="stat-card">
+          <h3 class="stat-number" data-target="25000">0</h3>
+          <p data-i18n="statsPatients">Patients Served</p>
+        </div>
+        <div class="stat-card">
+          <h3 class="stat-number" data-target="15">0</h3>
+          <p data-i18n="statsYears">Years of Practice</p>
+        </div>
+        <div class="stat-card">
+          <h3 class="stat-number" data-target="6000">0</h3>
+          <p data-i18n="statsFamilies">Families Trust Us</p>
+        </div>
+        <div class="stat-card">
+          <h3>24/7</h3>
+          <p data-i18n="statsAvailability">Care Availability</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h3 data-clinic-name>Sana Ullah Clinic</h3>
+        <p data-i18n="footerTagline">Trusted family healthcare with dignity, clarity, and continuity.</p>
+      </div>
+      <div>
+        <h4 data-i18n="navServices">Services</h4>
+        <ul class="clean-list small">
+          <li>General Physician</li>
+          <li>Family Medicine</li>
+          <li>Digestive Disorders</li>
+          <li>Fever & Infection Care</li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="sectionContact">Contact & Visit</h4>
+        <p><a class="call-link" href="tel:+923237366386" data-clinic-phone>0323-7366386</a></p>
+        <p data-clinic-address>Vanike Road, Opp. Akram Tractor Workshop, Hafizabad</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>
+        <span data-clinic-name>Sana Ullah Clinic</span> © <span id="currentYear"></span>
+        <span data-i18n="footerRights">All rights reserved.</span>
+      </p>
+    </div>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <script src="content.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

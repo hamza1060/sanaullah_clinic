@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Gallery and clinic highlights of Sana Ullah Clinic.">
+  <title>Sana Ullah Clinic | Gallery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="gallery">
+  <div class="page-transition" aria-hidden="true"></div>
+  <header class="navbar-wrap">
+    <nav class="navbar container" aria-label="Main Navigation">
+      <a href="index.html" class="logo"><i class="fa-solid fa-staff-snake"></i><span data-clinic-name>Sana Ullah Clinic</span></a>
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+      <ul class="nav-links">
+        <li><a href="index.html" data-nav="index" data-i18n="navHome">Home</a></li>
+        <li><a href="about.html" data-nav="about" data-i18n="navAbout">About</a></li>
+        <li><a href="services.html" data-nav="services" data-i18n="navServices">Services</a></li>
+        <li><a href="gallery.html" data-nav="gallery" data-i18n="navGallery">Gallery</a></li>
+        <li><a href="contact.html" data-nav="contact" data-i18n="navContact">Contact</a></li>
+        <li><button class="lang-toggle" aria-label="Toggle language">اردو | EN</button></li>
+        <li><a class="btn-nav call-link" href="tel:+923237366386"><i class="fa-solid fa-phone"></i><span data-i18n="navCall">Call Now</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="sub-hero">
+      <div class="container reveal">
+        <span class="section-kicker" data-i18n="sectionGallery">Clinic Gallery</span>
+        <h1 data-i18n="sectionGallery">Clinic Gallery</h1>
+        <p data-i18n="announceTitle">Good News from Sana Ullah Clinic</p>
+      </div>
+    </section>
+
+    <section class="section container reveal">
+      <div id="galleryGrid" class="gallery-grid stagger-parent"></div>
+    </section>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+      <button class="lightbox-close" aria-label="Close image"><i class="fa-solid fa-xmark"></i></button>
+      <img id="lightboxImg" src="" alt="Expanded clinic image">
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h3 data-clinic-name>Sana Ullah Clinic</h3>
+        <p data-i18n="footerTagline">Trusted family healthcare with dignity, clarity, and continuity.</p>
+      </div>
+      <div>
+        <h4 data-i18n="sectionContact">Contact & Visit</h4>
+        <p><a class="call-link" href="tel:+923237366386" data-clinic-phone>0323-7366386</a></p>
+        <p data-clinic-address>Vanike Road, Opp. Akram Tractor Workshop, Hafizabad</p>
+      </div>
+      <div>
+        <h4 data-i18n="navContact">Contact</h4>
+        <p><a href="contact.html" data-i18n="navContact">Contact</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p><span data-clinic-name>Sana Ullah Clinic</span> © <span id="currentYear"></span> <span data-i18n="footerRights">All rights reserved.</span></p>
+    </div>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" aria-label="Back to top"><i class="fa-solid fa-chevron-up"></i></button>
+
+  <script src="content.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
