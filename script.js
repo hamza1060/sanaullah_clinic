@@ -26,7 +26,14 @@
     });
 
     document.querySelectorAll("[data-clinic-address]").forEach((el) => {
-      el.textContent = content.clinic?.address?.[getLang()] || "Vanike Road, Opp. Akram Tractor Workshop, Hafizabad";
+      el.textContent = content.clinic?.address?.[getLang()] || "Moh. Jharianwala vanike road Hafizabad, Pakistan";
+    });
+
+    document.querySelectorAll("[data-clinic-map]").forEach((el) => {
+      const url = content.clinic?.mapUrl || "https://maps.app.goo.gl/gtSwsNbNWUqDiEdE6?g_st=iwb";
+      el.setAttribute("href", url);
+      el.setAttribute("target", "_blank");
+      el.setAttribute("rel", "noopener noreferrer");
     });
 
     document.querySelectorAll("[data-clinic-doctor]").forEach((el) => {
@@ -84,20 +91,63 @@
   });
 
   if (menuToggle && navLinksContainer) {
-    menuToggle.addEventListener("click", () => {
-      navLinksContainer.classList.toggle("active");
-      const expanded = navLinksContainer.classList.contains("active");
+    const menuIcon = menuToggle.querySelector("i");
+    let lastPointerDownAt = 0;
+
+    const setMenuExpanded = (expanded) => {
+      navLinksContainer.classList.toggle("active", expanded);
       menuToggle.setAttribute("aria-expanded", String(expanded));
-      menuToggle.innerHTML = expanded
-        ? '<i class="fa-solid fa-xmark"></i>'
-        : '<i class="fa-solid fa-bars"></i>';
+
+      if (menuIcon) {
+        menuIcon.classList.remove("fa-bars", "fa-xmark");
+        menuIcon.classList.add(expanded ? "fa-xmark" : "fa-bars");
+      }
+    };
+
+    const openMenu = () => setMenuExpanded(true);
+    const closeMenu = () => setMenuExpanded(false);
+    const toggleMenu = () => setMenuExpanded(!navLinksContainer.classList.contains("active"));
+
+    const handleTogglePress = (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      toggleMenu();
+    };
+
+    menuToggle.addEventListener("pointerdown", (event) => {
+      lastPointerDownAt = Date.now();
+      handleTogglePress(event);
+    });
+
+    menuToggle.addEventListener("click", (event) => {
+      if (Date.now() - lastPointerDownAt < 700) {
+        event.preventDefault();
+        event.stopPropagation();
+        return;
+      }
+      handleTogglePress(event);
     });
 
     document.addEventListener("click", (event) => {
-      if (!navLinksContainer.contains(event.target) && !menuToggle.contains(event.target)) {
-        navLinksContainer.classList.remove("active");
-        menuToggle.setAttribute("aria-expanded", "false");
-        menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+      const clickedInsideMenu = navLinksContainer.contains(event.target);
+      const clickedOnToggle = menuToggle.contains(event.target);
+
+      if (!clickedInsideMenu && !clickedOnToggle) {
+        closeMenu();
+      }
+    });
+
+    navLinksContainer.querySelectorAll('a[href$=".html"]').forEach((link) => {
+      link.addEventListener("click", () => {
+        if (window.matchMedia("(max-width: 980px)").matches) {
+          closeMenu();
+        }
+      });
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        closeMenu();
       }
     });
   }
@@ -178,15 +228,16 @@
   if (counterNodes.length && !prefersReduced) {
     const animateCounter = (el) => {
       const target = Number(el.dataset.target || 0);
+      const suffix = el.dataset.suffix || "";
       let current = 0;
       const step = Math.max(1, Math.ceil(target / 80));
       const update = () => {
         current += step;
         if (current >= target) {
-          el.textContent = target.toLocaleString();
+          el.textContent = `${target.toLocaleString()}${suffix}`;
           return;
         }
-        el.textContent = current.toLocaleString();
+        el.textContent = `${current.toLocaleString()}${suffix}`;
         requestAnimationFrame(update);
       };
       update();
@@ -207,7 +258,8 @@
     counterNodes.forEach((node) => counterObserver.observe(node));
   } else {
     counterNodes.forEach((node) => {
-      node.textContent = Number(node.dataset.target || 0).toLocaleString();
+      const value = Number(node.dataset.target || 0).toLocaleString();
+      node.textContent = `${value}${node.dataset.suffix || ""}`;
     });
   }
 

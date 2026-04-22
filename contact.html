@@ -15,15 +15,15 @@
   <div class="page-transition" aria-hidden="true"></div>
   <header class="navbar-wrap">
     <nav class="navbar container" aria-label="Main Navigation">
-      <a href="index.html" class="logo"><i class="fa-solid fa-staff-snake"></i><span data-clinic-name>Sana Ullah Clinic</span></a>
-      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+      <a href="index.html" class="logo"><img src="assets/logo.jpg" alt="Sana Ullah Clinic logo" loading="eager" decoding="async"><span data-clinic-name>Sana Ullah Clinic</span></a>
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
       <ul class="nav-links">
         <li><a href="index.html" data-nav="index" data-i18n="navHome">Home</a></li>
         <li><a href="about.html" data-nav="about" data-i18n="navAbout">About</a></li>
         <li><a href="services.html" data-nav="services" data-i18n="navServices">Services</a></li>
         <li><a href="gallery.html" data-nav="gallery" data-i18n="navGallery">Gallery</a></li>
         <li><a href="contact.html" data-nav="contact" data-i18n="navContact">Contact</a></li>
-        <li><button class="lang-toggle" aria-label="Toggle language">اردو | EN</button></li>
+        <li><button class="lang-toggle" type="button" aria-label="Toggle language">اردو | EN</button></li>
         <li><a class="btn-nav call-link" href="tel:+923237366386"><i class="fa-solid fa-phone"></i><span data-i18n="navCall">Call Now</span></a></li>
       </ul>
     </nav>
@@ -45,7 +45,7 @@
           <p><a class="call-link" href="tel:+923237366386" data-clinic-phone>0323-7366386</a></p>
 
           <h3 data-i18n="contactCardAddress">Address</h3>
-          <p data-clinic-address>Vanike Road, Opp. Akram Tractor Workshop, Hafizabad</p>
+          <p><a data-clinic-map data-clinic-address>Moh. Jharianwala vanike road Hafizabad, Pakistan</a></p>
 
           <h3 data-i18n="contactCardHours">Hours</h3>
           <p data-i18n="contactCardHoursValue">Daily Checkup Available</p>
@@ -65,6 +65,27 @@
             <a class="call-link" href="tel:+923237366386" data-clinic-phone>0323-7366386</a>
           </p>
         </article>
+      </div>
+    </section>
+
+    <section class="section container reveal">
+      <div class="section-head center">
+        <span class="section-kicker">Google Map</span>
+        <h2>Find Us on Google Maps</h2>
+        <p class="muted">Tap and navigate to the clinic location.</p>
+        <div class="hero-actions" style="justify-content:center">
+          <a class="btn btn-primary" data-clinic-map>Open in Google Maps</a>
+        </div>
+      </div>
+
+      <div class="map-panel">
+        <iframe
+          class="map-embed"
+          title="Sana Ullah Clinic location map"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen
+          src="https://www.google.com/maps?q=Moh.%20Jharianwala%20vanike%20road%20Hafizabad%2C%20Pakistan&output=embed"></iframe>
       </div>
     </section>
   </main>

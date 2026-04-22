@@ -6,9 +6,10 @@ window.siteContent = {
     },
     phoneDisplay: "0323-7366386",
     phoneLink: "+923237366386",
+    mapUrl: "https://maps.app.goo.gl/gtSwsNbNWUqDiEdE6?g_st=iwb",
     address: {
-      en: "Vanike Road, Opp. Akram Tractor Workshop, Hafizabad",
-      ur: "ونیکے روڈ، بالمقابل اکرم ٹریکٹر ورکشاپ، حافظ آباد"
+      en: "Moh. Jharianwala vanike road Hafizabad, Pakistan",
+      ur: "محلہ جھریاں والا، ونیکے روڈ، حافظ آباد، پاکستان"
     },
     doctor: {
       en: "Dr. Asher Malik",
@@ -28,8 +29,8 @@ window.siteContent = {
     navCall: { en: "Call Now", ur: "کال کریں" },
 
     heroBadge: {
-      en: "Gold Medalist General Physician",
-      ur: "گولڈ میڈلسٹ جنرل فزیشن"
+      en: "Gold Medalist Physician & Surgeon",
+      ur: "گولڈ میڈلسٹ فزیشن اور سرجن"
     },
     heroTitle: {
       en: "Welcome to Sana Ullah Clinic",
@@ -57,25 +58,25 @@ window.siteContent = {
     sectionContact: { en: "Contact & Visit", ur: "رابطہ اور وزٹ" },
 
     doctorBio: {
-      en: "Dr. Asher Malik (MBBS/MD, NLE, PMDC, RMP) is a gold medalist physician known for practical diagnosis, patient education, and long-term family care.",
-      ur: "ڈاکٹر عاشر ملک (MBBS/MD, NLE, PMDC, RMP) گولڈ میڈلسٹ فزیشن ہیں، جو درست تشخیص، مریض کی رہنمائی اور فیملی کی طویل مدتی نگہداشت کے لیے معروف ہیں۔"
+      en: "Dr. Asher Malik (MBBS/MD, NLE, PMDC, RMP) is a gold medalist physician and surgeon known for practical diagnosis, patient education, and long-term family care.",
+      ur: "ڈاکٹر عاشر ملک (MBBS/MD, NLE, PMDC, RMP) گولڈ میڈلسٹ فزیشن اور سرجن ہیں، جو درست تشخیص، مریض کی رہنمائی اور فیملی کی طویل مدتی نگہداشت کے لیے معروف ہیں۔"
     },
 
     experienceTitle: { en: "Professional Experience", ur: "پیشہ ورانہ تجربہ" },
     exp1: {
-      en: "Ex. Medical Officer - Almeer Shirazi Hospital, Hafizabad",
-      ur: "سابق میڈیکل آفیسر - المیر شیرازی ہسپتال، حافظ آباد"
+      en: "Medical Officer - Shirazi Hospital, Hafizabad",
+      ur: "میڈیکل آفیسر - شیرازی ہسپتال، حافظ آباد"
     },
     exp2: {
       en: "Ex. Medical Officer - Noor Al Shifa Hospital, Lahore",
       ur: "سابق میڈیکل آفیسر - نور الشفا ہسپتال، لاہور"
     },
     exp3: {
-      en: "Ex. House Physician - Service Hospital, Lahore",
+      en: "Ex. House Physician - Services Hospital, Lahore",
       ur: "سابق ہاؤس فزیشن - سروسز ہسپتال، لاہور"
     },
     exp4: {
-      en: "Ex. House Surgeon - Service Hospital, Lahore",
+      en: "Ex. House Surgeon - Services Hospital, Lahore",
       ur: "سابق ہاؤس سرجن - سروسز ہسپتال، لاہور"
     },
 
@@ -114,7 +115,7 @@ window.siteContent = {
   },
   services: [
     {
-      icon: "fa-stomach",
+      icon: "fa-bowl-food",
       en: "Stomach & Digestive Care",
       ur: "معدہ اور نظامِ ہاضمہ"
     },
@@ -149,9 +150,34 @@ window.siteContent = {
       ur: "الرجی اور خارش"
     },
     {
-      icon: "fa-kidneys",
+      icon: "fa-droplet",
       en: "Kidney Stone Guidance",
       ur: "گردے کی پتھری رہنمائی"
+    },
+    {
+      icon: "fa-wave-square",
+      en: "ECG",
+      ur: "ای سی جی"
+    },
+    {
+      icon: "fa-magnifying-glass",
+      en: "Digital Ultrasound",
+      ur: "ڈیجیٹل الٹراساؤنڈ"
+    },
+    {
+      icon: "fa-ear-deaf",
+      en: "Ear Cleaning",
+      ur: "کان کی صفائی"
+    },
+    {
+      icon: "fa-syringe",
+      en: "Foley Catheter",
+      ur: "فولی کیتھیٹر"
+    },
+    {
+      icon: "fa-kit-medical",
+      en: "NG Tube Placement",
+      ur: "این جی ٹیوب لگانا"
     },
     {
       icon: "fa-user-doctor",
